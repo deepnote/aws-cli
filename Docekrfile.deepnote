@@ -1,0 +1,21 @@
+
+FROM python:3.8-alpine AS builder
+
+ENV AWSCLI_VERSION=2.10.1
+
+RUN apk add --no-cache \
+  curl \
+  make \
+  cmake \
+  git \
+  gcc \
+  g++ \
+  libc-dev \
+  libffi-dev \
+  openssl-dev \
+  && cd /tmp && git clone -b deepnote-v2.1 --single-branch --depth 1 https://github.com/deepnote/aws-cli \
+  && cd /tmp/aws-cli \
+  && ./configure --prefix=/opt/aws-cli/ --with-download-deps --with-install-type=portable-exe \
+  && make \
+  && make install
+
