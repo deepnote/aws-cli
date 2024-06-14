@@ -47,6 +47,13 @@ You can find more detailed installation instructions `here <https://docs.aws.ama
 If you want to run the ``v2`` development branch of the CLI, see the
 "CLI Dev Version" section below.
 
+-----------------------------------
+Deepnote custom build of Dockerfile
+-----------------------------------
+We are using in a Deepnote custom build of aws-cli because bug which is 
+not fixed in the upstream. PR https://github.com/aws/aws-cli/pull/8345
+
+
 
 ------------
 CLI Releases
