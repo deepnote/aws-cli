@@ -1,4 +1,4 @@
-FROM node:22.24.0-bookworm-slim
+FROM node:22.14.0-bookworm-slim
 
 ENV AWSCLI_VERSION=2.10.1
 
