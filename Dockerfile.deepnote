@@ -14,5 +14,5 @@ RUN apt update && apt install -y --no-install-recommends \
 
 RUN cd /tmp && git clone -b deepnote-v2.1 --single-branch --depth 1 https://github.com/deepnote/aws-cli && \
   cd /tmp/aws-cli && \
-  pip install .
+  pip install . --break-system-packages
 
